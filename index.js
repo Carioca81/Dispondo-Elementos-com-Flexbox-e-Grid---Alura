@@ -1,8 +1,9 @@
-
-let hide = false // a barra inicia aparente
+// MINHA SOLUÇÃO PARA OCULTAR/MOSTRAR A BARRA LATERAL
+/*
+let hide = true // a barra inicia aparente
 let intervalId
 let barralat = document.querySelector(".menu-lateral")
-let left = 0
+let left = -282
 
 function show_hide(){
     barralat.style.position = "relative";
@@ -25,11 +26,11 @@ function show_hide(){
 
 function barra(h){
     if(h == true){// se a barra estiver oculta
-        intervalId = setInterval(decrementa, 1)
+        intervalId = setInterval(decrementa, 0.25)
     }
     
     if(h == false){// se a barra estiver aparente
-        intervalId = setInterval(incrementa, 1)
+        intervalId = setInterval(incrementa, 0.25)
     }
 
 }
@@ -62,3 +63,12 @@ function para(h,v){
         // h = false
     }
 }
+*/
+
+// SOLUÇÃO DO INSTRUTOR
+const botaoMenu = document.querySelector('.cabecalho__menu')
+const menuLateral = document.querySelector('.menu-lateral')
+
+botaoMenu.addEventListener('click', () => {
+    menuLateral.classList.toggle('menu-lateral--ativo')
+})

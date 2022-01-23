@@ -36,10 +36,25 @@ body{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+   
+    /* Parte da minha solução para ocultar/mostrar a barra lateral */
     /* position: relative; */
+    /* left: -282px; */
+
+    /* Parte da solução do instrutor para  ocultar/mostrar a barra lateral */
+    position: absolute;
+    left: -100vw;
+    transition: left .30s;
+    z-index: 99;
+
     background-color: #15191c;
     width: 75vw;
     height: 100vh;
+}
+
+.menu-lateral--ativo{
+    left: 0;
+    transition: left .30s;
 }
 
 .menu-lateral__logo{
@@ -56,6 +71,7 @@ body{
     align-items: center;
 }
 
+/* Parte da solução do intrutor para ocultar/mostrar a barra lateral */
 .menu-lateral__link--ativo{
     color: #ffffff;
     padding-left:56px;
