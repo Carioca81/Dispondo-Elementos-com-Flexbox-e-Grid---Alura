@@ -36,7 +36,7 @@ body{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    position: relative;
+    /* position: relative; */
     background-color: #15191c;
     width: 75vw;
     height: 100vh;

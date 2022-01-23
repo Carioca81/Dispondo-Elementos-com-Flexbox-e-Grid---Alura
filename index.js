@@ -5,7 +5,8 @@ let barralat = document.querySelector(".menu-lateral")
 let left = 0
 
 function show_hide(){
-    // barralat.style.position = "relative";
+    barralat.style.position = "relative";
+    document.querySelector(".cabecalho__menu").setAttribute("onclick", "")
 
     if(hide == false){//se a barra estiver aparente...
         hide = true //esconde a barra
@@ -22,10 +23,9 @@ function show_hide(){
     }
 }
 
-
 function barra(h){
     if(h == true){// se a barra estiver oculta
-        intervalId = setInterval(decrementa, 2)
+        intervalId = setInterval(decrementa, 1)
     }
     
     if(h == false){// se a barra estiver aparente
@@ -33,10 +33,6 @@ function barra(h){
     }
 
 }
-
-// barralat.style.left = `${100}px`;
-
-
 
 function incrementa(){
     left += 2
@@ -55,11 +51,13 @@ function decrementa(){
 function para(h,v){
     if(v >= 0 && h == false){
         // console.log('Parei de incrementar')
+        document.querySelector(".cabecalho__menu").setAttribute("onclick", "show_hide()")
         clearInterval(intervalId)
         // h = true
     }
     if(v <= -282 && h == true){
         // console.log('Parei de decrementar')
+        document.querySelector(".cabecalho__menu").setAttribute("onclick", "show_hide()")
         clearInterval(intervalId)
         // h = false
     }
